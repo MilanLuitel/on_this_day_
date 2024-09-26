@@ -14,26 +14,6 @@ This project is a web application that allows users to find historical events th
 - Backend: Express.js
 - API: [On This Day API](https://byabbe.se/on-this-day/)
 
-## Project Structure
-project-root/
-│
-├── frontend/
-│ ├── public/
-│ ├── src/
-│ │ ├── App.js
-│ │ ├── index.js
-│ │ └── ...
-│ ├── package.json
-│ └── ...
-│
-├── backend/
-│ ├── server.js
-│ ├── package.json
-│ └── ...
-│
-└── README.md
-
-
 ## Setup and Installation
 
 1. Clone the repository:
