@@ -10,7 +10,7 @@ const API_URL = "https://byabbe.se/on-this-day";
 
 
 app.use(cors({
-    origin: process.env.VERCEL_URL || 'http://localhost:3000'
+    origin: process.env.VERCEL_URL || process.env.ALLOWED_ORIGIN || 'http://localhost:3000'
   }));
 
 app.use(bodyParser.urlencoded({ extended: true }));
