@@ -1,0 +1,46 @@
+body{
+  box-sizing: border-box;
+  background-color: aqua;
+}
+.container h1{
+  padding-top: 10px;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5em;
+  background-color: aliceblue;
+  max-width: 50vw;
+  border-radius: 8px;
+}
+.myForm{
+  padding-top: 3em;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr;
+  grid-column-gap: 50px ;
+  justify-content: center;
+  align-items: center;
+}
+.content{
+  height: 20vw;
+  width: 40vw;
+  background-color: azure;
+  margin: 40px;
+  border-radius: 8px;
+  color: black;
+}
+.content p{
+  padding: 20px;
+}
+.submit-btn{
+  background-color: aqua;
+  color: black;
+  border: 0;
+  border-radius: 4px;
+  font-size: medium;
+  padding: 10px;
+  font-weight: bold;
+}
