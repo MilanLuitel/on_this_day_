@@ -12,8 +12,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/result', { month, date });
-      console.log({ month, date });
+      const response = await axios.post(process.env.REACT_APP_API_URL || '/api/result', { month, date });
       setEvent(response.data.event);
       setError('');
     } catch (err) {
