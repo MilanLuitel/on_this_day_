@@ -1,5 +1,11 @@
 {
-    "name": "historical-event-finder",
-    "version": "1.0.0",
-    "workspaces": ["frontend", "backend"]
+    "version": 2,
+    "builds": [
+      { "src": "frontend/package.json", "use": "@vercel/static-build" },
+      { "src": "backend/server.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      { "src": "/api/(.*)", "dest": "backend/server.js" },
+      { "src": "/(.*)", "dest": "frontend/$1" }
+    ]
   }
