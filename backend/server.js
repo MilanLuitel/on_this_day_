@@ -5,11 +5,13 @@ import cors from 'cors';
 
 
 const app = express();
-const port = 5000;
+const PORT = process.env.PORT || 5000;
 const API_URL = "https://byabbe.se/on-this-day";
 
 
-app.use(cors());
+app.use(cors({
+    origin: process.env.VERCEL_URL || 'http://localhost:3000'
+  }));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -29,6 +31,4 @@ app.post("/api/result", async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-});
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
